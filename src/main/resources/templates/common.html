@@ -1,0 +1,38 @@
+<!-- common head template -->
+<head th:fragment="head">
+  <meta charset="utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link th:href="@{/css/common.css}" rel="stylesheet"></link>
+  <link th:href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet"></link>
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="./javascript/ie8/html5shiv.js"></script>
+    <script type="text/javascript" src="./javascript/ie8/respond.js"></script>
+    <script type="text/javascript" src="./javascript/ie8/jquery-1.11.3.min.js"></script>
+  <![endif]-->
+  <!--[if gte IE 9]><!-->
+    <script type="text/javascript" th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+  <!--<![endif]-->
+  <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.1/js/bootstrap.min.js}"></script>
+</head>
+<!-- /. common head template -->
+<!-- common header & sidebar template -->
+<div th:fragment="header">
+  <div class="header"></div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <li><a href="/">Menu１</a></li>
+      <li><a href="/">Menu2</a></li>
+      <li><a href="/">Menu3</a></li>
+      <li><a href="/">Menu4</a></li>
+      <li><a href="/">Menu5</a></li>
+    </ul>
+  </div>
+</div>
+<!-- /. common header & sidebar template -->
