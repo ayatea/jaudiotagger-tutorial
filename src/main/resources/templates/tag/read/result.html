@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:include="common.html::head"></head>
+  <body>
+    <div th:include="common.html::header"></div>
+    <div id='center' class="main center">
+      <div class="mainInner">
+        <!-- TODO: 要デザインリファクタリング -->
+        <label>楽曲タグの読み込み結果</label></br>
+        <code>
+          <span>タイトル: [[${tag.getTitle()}]]</span></br>
+          <span>タイトル(かな): [[${tag.getTitleKana()}]]</span></br>
+          <span>アーティスト名: [[${tag.getArtist()}]]</span></br>
+          <span>アーティスト名(かな): [[${tag.getArtistKana()}]]</span></br>
+          <span>アルバムアーティスト名: [[${tag.getAlbumArtist()}]]</span></br>
+          <span>アルバムアーティスト名(かな): [[${tag.getAlbumArtistKana()}]]</span></br>
+          <span>アルバム名: [[${tag.getAlbum()}]]</span></br>
+          <span>アルバム名(かな): [[${tag.getAlbumKana()}]]</span></br>
+          <span>リリース年: [[${tag.getReleaseYear()}]]</span></br>
+          <span>作曲者: [[${tag.getComposer()}]]</span></br>
+          <span>作曲者(かな): [[${tag.getComposerKana()}]]</span></br>
+          <span>ジャンル: [[${tag.getGenre()}]]</span></br>
+        </code>
+        <form th:action="@{/tag/index}" method="get">
+          <button type="submit" style="margin-top: 10px">ファイル選択へ戻る</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

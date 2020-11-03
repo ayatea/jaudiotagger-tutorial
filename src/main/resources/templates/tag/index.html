@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:include="common.html::head"></head>
+  <body>
+    <div th:include="common.html::header"></div>
+    <div id='center' class="main center">
+      <div class="mainInner">
+        <label>XMLファイルを選択してください</label></br>
+        <font color="red">[[${error}]]</font>
+        <form th:action="@{/tag/read}" method="post" enctype="multipart/form-data">
+          <input type="file" name="uploadFile" style="display:inline;" /></br>
+          <button type="submit" style="margin-top: 10px">upload</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
