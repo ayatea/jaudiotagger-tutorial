@@ -21,7 +21,7 @@
           <span>作曲者(かな): [[${tag.getComposerKana()}]]</span></br>
           <span>ジャンル: [[${tag.getGenre()}]]</span></br>
         </code>
-        <form th:action="@{/tag/index}" method="get">
+        <form th:action="@{/tag/read/index}" method="get">
           <button type="submit" style="margin-top: 10px">ファイル選択へ戻る</button>
         </form>
       </div>

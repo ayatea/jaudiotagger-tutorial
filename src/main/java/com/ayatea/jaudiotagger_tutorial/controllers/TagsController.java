@@ -47,9 +47,9 @@ public class TagsController {
 	// ===================================================================================
 	//                                                                               Index
 	//                                                                           =========
-	@RequestMapping(value="/index", method = RequestMethod.GET)
+	@RequestMapping(value="read/index", method = RequestMethod.GET)
 	public String readIndex(Model model) {
-        return "tag/index";
+        return "tag/read/index";
 	}
 	
 	// ===================================================================================
@@ -83,7 +83,7 @@ public class TagsController {
 	        return "tag/read/result";
 		} else {
 			model.addAttribute("error", "有効な拡張子は" + VALID_EXTENSIONS.toString() + "です。");
-			return "tag/index";
+			return "tag/read/index";
 		}
 	}
 }
